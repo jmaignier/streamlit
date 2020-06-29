@@ -1,1 +1,15 @@
 streamlit 
+matplotlib 
+seaborn 
+pandas 
+numpy
+datetime
+plotly 
+bokeh 
+plotly.express
+plotly.graph_objects
+os 
+time 
+altair 
+jours_feries_france
+ast
