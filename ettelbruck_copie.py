@@ -29,7 +29,7 @@ register_matplotlib_converters()
 import jours_feries_france as jff
 from jours_feries_france import JoursFeries
 import pydeck as pdk
-import plotly_express as px
+import plotly.express as px
 import plotly.graph_objects as go
 import random
 from plotly import tools
