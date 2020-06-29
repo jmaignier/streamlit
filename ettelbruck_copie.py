@@ -172,7 +172,7 @@ def process_sta(data_brute):
             
 @st.cache
 def load_pkg(nrows=None):
-    data=pd.read_csv('/Users/jeremymaignier/Desktop/UPCITI/donnees/recup_auto/gros_park.csv',sep=',')
+    data=pd.read_csv('https://github.com/maigje98/test_app/blob/master/gros_park.csv',sep=',')
 
     format_date=str('%Y-%m-%d %H:%M:%S')
     data['date']=data['date'].apply(lambda x:datetime.strptime(x,format_date))
@@ -210,7 +210,7 @@ def load_pkg(nrows=None):
         
 @st.cache
 def load_sta(nrows=None):
-    station=pd.read_csv('/Users/jeremymaignier/Desktop/UPCITI/donnees/temps_station/gros_station.csv',sep=',')
+    station=pd.read_csv('https://github.com/maigje98/test_app/blob/master/gros_station.csv',sep=',')
    
    
     station.set_index(station.columns[0],inplace=True)
@@ -287,7 +287,7 @@ def graph(DF,FORMAT_X,TITRE,TITRE_color,LEGEND_X,LEGEND_Y,COLOR,PAS=None):
 
 @st.cache
 def load_data_EDA():
-    path='/Users/jeremymaignier/Desktop/UPCITI/donnees/datas_pour_streamlit/occup_preprocess_17-31_mai.csv'
+    path='https://github.com/maigje98/test_app/blob/master/occup_preprocess_17-31_mai.csv'
     data=pd.read_csv('/Users/jeremymaignier/Desktop/UPCITI/donnees/datas_pour_streamlit/occup_preprocess_17-31_mai.csv',sep=',')
     data['date']=pd.to_datetime(data['date'])
     test=data.set_index('date')
