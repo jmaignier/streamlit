@@ -7,7 +7,6 @@ datetime
 plotly 
 bokeh 
 plotly.express
-plotly.graph_objects
 os 
 time 
 altair 
