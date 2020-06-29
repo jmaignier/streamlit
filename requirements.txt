@@ -6,7 +6,6 @@ numpy
 datetime
 plotly 
 bokeh 
-plotly.express
 os 
 time 
 altair 
