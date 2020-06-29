@@ -6,7 +6,6 @@ numpy
 datetime
 plotly 
 bokeh 
-os 
 time 
 altair 
 jours_feries_france
