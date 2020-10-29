@@ -5,6 +5,8 @@
 
 ## Pandas packages
 import streamlit as st
+import matplotlib.pyplot as plt 
+import pandas as pd
 
 ## Visu
 def main():
@@ -13,6 +15,10 @@ def main():
     name = st.text_input("enter your name")
     if name :
         st.success(f"Hello {name}")
+        
+    fig,ax=plt.subplots()
+    fig.plot([1,2],[2,4])
+    st.pyplot(fig)
     
 if __name__=="__main__":
     main()
