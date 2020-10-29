@@ -8,7 +8,7 @@ import streamlit as st
 
 ## Visu
 def main():
-    st.beta_set_page_config(page_title='Application de test modifiée', page_icon = '🤡', layout = 'wide', initial_sidebar_state = 'auto')
+    st.set_page_config(page_title='Application de test modifiée', page_icon = '🤡', layout = 'wide', initial_sidebar_state = 'auto')
     st.title("ESSAI")
     name = st.text_input("enter your name")
     if name :
