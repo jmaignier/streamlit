@@ -17,7 +17,7 @@ def main():
         st.success(f"Hello {name}")
         
     fig,ax=plt.subplots()
-    fig.plot([1,2],[2,4])
+    plt.plot([1,2],[2,4])
     st.pyplot(fig)
     
 if __name__=="__main__":
