@@ -10,7 +10,10 @@ from streamlit.components.v1 import html
 import random
 import pandas as pd
 import numpy as np
-import unidecode
+import unicodedata
+
+def decode(s):
+    return unicodedata.normalize('NFD', s).encode('ascii', 'ignore').lower()
 
 @st.cache(suppress_st_warning=True,allow_output_mutation=True)
 def load_quizz(drop):
@@ -76,7 +79,7 @@ def main():
             rep = st.text_input("Cash seulement disponible : Entrez directement la réponse")
             
     if st.button(f"Valider réponse"):
-        if rep == vrai or rep in vrai or unidecode.unidecode(rep).lower() in unidecode.unidecode(vrai).lower():
+        if rep == vrai or rep in vrai or decode(rep) in decode(vrai):
             st.success(f"Félications ! 🎉  {rep}, Bonne réponse  !  +{dict_pts[diff]}, ajoute ton score aux précédents")
         else:
             st.error(f"Aïe .. {rep}, Mauvaise réponse ...")
