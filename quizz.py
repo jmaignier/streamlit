@@ -82,7 +82,7 @@ def main():
             st.error(f"Aïe .. {rep}, Mauvaise réponse ...")
             st.warning(f"La réponse était {vrai}")
                 
-    html("""<div> Made by <a href="https://github.com/maigje98/test_app/"> Jeremy Maignier </a></div>""")
+    html("""Fait par <a href="https://github.com/maigje98/test_app/" target="_blank"> Jeremy Maignier </a> (cliquer pour ouvrir le lien dans un nouvel onglet)""")
     
     
 if __name__ == "__main__":
