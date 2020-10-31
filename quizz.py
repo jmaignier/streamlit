@@ -81,5 +81,7 @@ def main():
             st.warning(f"La réponse était {vrai}")
                 
     st.markdown("""<div> Made by <a href="https://github.com/maigje98/test_app/"> Jeremy Maignier </a></div>""",unsafe_allow_html=True)
+    
+    
 if __name__ == "__main__":
     main()
