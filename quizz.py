@@ -29,7 +29,7 @@ def main():
     dict_pts = {'1':'1 point','1.5':'2 points','2':'3 points','2.5':'4 points','3':'5 points'}
     
     st.title("Bienvenue dans le Super Quizz de Culture G (rémy) 🧠")
-    rd = st.slider("Choisis un nombre 'au hasard'",min=0,max=100,value=0)
+    rd = st.slider("Choisis un nombre 'au hasard'",min_value=0,max_value=100,value=0,step=1)
     random.seed(rd)
     quizz = load_quizz([])
     pts = [int(o[0]) for o in range(quizz.shape[0]) for o in list(dict_pts.values())]
