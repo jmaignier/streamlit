@@ -1,11 +1,6 @@
 streamlit 
-matplotlib 
-seaborn 
+random
 pandas 
 numpy
-datetime
-plotly 
-bokeh 
-altair 
-jours_feries_france
+
 
