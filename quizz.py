@@ -78,7 +78,7 @@ def main():
         with col.beta_expander("Faire votre réponse"):
             rep = st.text_input("Cash seulement disponible : Entrez directement la réponse")
             
-    if col.button(f"Valider réponse"):
+    if st.button(f"Valider réponse"):
         if rep == vrai or rep in vrai or decode(rep) in decode(vrai):
             col.success(f"Félications ! 🎉  {rep}, Bonne réponse  !  +{dict_pts[diff]}, ajoute ton score aux précédents")
         else:
