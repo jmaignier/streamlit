@@ -80,6 +80,6 @@ def main():
             st.error(f"Aïe .. {rep}, Mauvaise réponse ...")
             st.warning(f"La réponse était {vrai}")
                 
-    
+    st.markdown("""<div> Made by <a href Jeremy Maignier""",unsafe_allow_html=True)
 if __name__ == "__main__":
     main()
