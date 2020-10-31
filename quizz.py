@@ -3,12 +3,14 @@
 
 # In[1]:
 
-## Pandas packages
+## Packages
 import streamlit as st
+import streamlit.components.v1 as components
+from streamlit.components.v1 import html
 import random
 import pandas as pd
 import numpy as np
-## Visu
+
 
 @st.cache(suppress_st_warning=True,allow_output_mutation=True)
 def load_quizz(drop):
@@ -80,7 +82,7 @@ def main():
             st.error(f"Aïe .. {rep}, Mauvaise réponse ...")
             st.warning(f"La réponse était {vrai}")
                 
-    st.markdown("""<div> Made by <a href="https://github.com/maigje98/test_app/"> Jeremy Maignier </a></div>""",unsafe_allow_html=True)
+    html("""<div> Made by <a href="https://github.com/maigje98/test_app/"> Jeremy Maignier </a></div>""")
     
     
 if __name__ == "__main__":
