@@ -2,5 +2,5 @@ streamlit
 random
 pandas 
 numpy
-
+streamlit.components.v1
 
