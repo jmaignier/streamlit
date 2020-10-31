@@ -14,7 +14,7 @@ import numpy as np
 def load_quizz(drop):
     quizz =  pd.read_csv('https://raw.githubusercontent.com/maigje98/test_app/master/Quizz.csv',sep=';',engine='python')
     quizz['DIFFICULTE'] = quizz['DIFFICULTE'].astype(str)
-    
+    quizz = quizz.drop(32)
     return quizz.drop(drop)
 
 
