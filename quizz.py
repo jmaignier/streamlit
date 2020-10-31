@@ -77,7 +77,7 @@ def main():
         if rep == vrai or rep in vrai:
             st.success(f"Félications ! 🎉  {rep}, Bonne réponse  !  +{dict_pts[diff]}, ajoute ton score aux précédents")
         else:
-            st.error(f"Aïe .. {rep}, Mauvaise réponse ..")
+            st.error(f"Aïe .. {rep}, Mauvaise réponse ...")
             st.warning(f"La réponse était {vrai}")
                 
     
