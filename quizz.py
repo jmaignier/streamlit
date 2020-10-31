@@ -30,7 +30,7 @@ def main():
     
     st.title("Bienvenue dans le Super Quizz de Culture G (rémy) 🧠")
     score = 0
-    random.seed(30)
+    random.seed(random.randint(0,100))
     quizz = load_quizz([])
     pts = [int(o[0]) for o in range(quizz.shape[0]) for o in list(dict_pts.values())]
     questions_repondues = st.sidebar.multiselect("Questions auxquelles vous avez déjà répondu",quizz.index)
@@ -70,20 +70,20 @@ def main():
                 
     elif diff == '1' and len(all_reps)>1 :
         st.info("Carré seulement disponible")
-        
-        with st.beta_expander("Faire votre réponse"):
+        col,row = st.beta_columns([1,0.001])
+        with col.beta_expander("Faire votre réponse"):
             rep = st.radio("Choisis la bonne réponse",all_reps)
     else:
-        
-        with st.beta_expander("Faire votre réponse"):
+        col,row = st.beta_columns([1,0.001])
+        with col.beta_expander("Faire votre réponse"):
             rep = st.text_input("Cash seulement disponible : Entrez directement la réponse")
             
     if st.button(f"Valider réponse"):
         if rep == vrai or rep in vrai or decode(rep) in decode(vrai):
-            st.success(f"Félications ! 🎉  {rep}, Bonne réponse  !  +{dict_pts[diff]}, ajoute ton score aux précédents")
+            col.success(f"Félications ! 🎉  {rep}, Bonne réponse  !  +{dict_pts[diff]}, ajoute ton score aux précédents")
         else:
-            st.error(f"Aïe .. {rep}, Mauvaise réponse ...")
-            st.warning(f"La réponse était {vrai}")
+            col.error(f"Aïe .. {rep}, Mauvaise réponse ...")
+            col.warning(f"La réponse était {vrai}")
                 
     html("""Fait par <a href="https://github.com/maigje98/test_app/" target="_blank"> Jeremy Maignier </a> (cliquer pour ouvrir le lien dans un nouvel onglet)""")
     
