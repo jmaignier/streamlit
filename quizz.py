@@ -12,7 +12,7 @@ import numpy as np
 
 @st.cache(suppress_st_warning=True,allow_output_mutation=True)
 def load_quizz(drop):
-    quizz =  pd.read_csv('/Users/jeremymaignier/Desktop/Loisirs/Quizz.csv',sep=';')
+    quizz =  pd.read_csv('https://raw.githubusercontent.com/maigje98/test_app/master/Quizz.csv',sep=';')
     quizz['DIFFICULTE'] = quizz['DIFFICULTE'].astype(str)
     
     return quizz.drop(drop)
