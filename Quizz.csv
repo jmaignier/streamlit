@@ -1,4 +1,4 @@
-Question;VRAI;Autre1;Autre2;Autre3;DIFFICULTE;Categorie
+Question,VRAI,Autre1,Autre2,Autre3,DIFFICULTE,Categorie
 Capitale Mongolie;oulan-bator ;Quito ;Astana;Ankara;3;Geo
 Pays le plus grand d'Europe (apres la Russie);Ukraine;Suede;Allemagne;Espagne;3;Geo
 pays/principaute d'europe le plus dense ;Monaco;Vatican;Gibraltar;Malte ;2;Geo
