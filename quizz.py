@@ -8,15 +8,11 @@ import streamlit as st
 import random
 import pandas as pd
 import numpy as np
-import chardet
 ## Visu
 
 @st.cache(suppress_st_warning=True,allow_output_mutation=True)
 def load_quizz(drop):
-    with open('https://raw.githubusercontent.com/maigje98/test_app/master/Quizz.csv', 'rb') as f:
-        result = chardet.detect(f.read()) 
-
-    quizz =  pd.read_csv('https://raw.githubusercontent.com/maigje98/test_app/master/Quizz.csv',sep=';',encoding=result['encoding'])
+    quizz =  pd.read_csv('https://raw.githubusercontent.com/maigje98/test_app/master/Quizz.csv',sep=';',encoding='utf-8')
     quizz['DIFFICULTE'] = quizz['DIFFICULTE'].astype(str)
     
     return quizz.drop(drop)
