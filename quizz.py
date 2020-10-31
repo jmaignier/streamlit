@@ -78,14 +78,14 @@ def main():
         with col.beta_expander("Faire votre réponse"):
             rep = st.text_input("Cash seulement disponible : Entrez directement la réponse")
             
-    if st.button(f"Valider réponse"):
+    if col.button(f"Valider réponse"):
         if rep == vrai or rep in vrai or decode(rep) in decode(vrai):
             col.success(f"Félications ! 🎉  {rep}, Bonne réponse  !  +{dict_pts[diff]}, ajoute ton score aux précédents")
         else:
             col.error(f"Aïe .. {rep}, Mauvaise réponse ...")
             col.warning(f"La réponse était {vrai}")
                 
-    html("""Fait par <a href="https://github.com/maigje98/test_app/" target="_blank"> Jeremy Maignier </a> (cliquer pour ouvrir le lien dans un nouvel onglet)""")
+    html("""<br> <br> Fait par <a href="https://github.com/maigje98/test_app/" target="_blank"> Jeremy Maignier </a> (cliquer pour ouvrir le lien dans un nouvel onglet)""")
     
     
 if __name__ == "__main__":
