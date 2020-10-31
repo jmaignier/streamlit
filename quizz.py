@@ -29,8 +29,8 @@ def main():
     dict_pts = {'1':'1 point','1.5':'2 points','2':'3 points','2.5':'4 points','3':'5 points'}
     
     st.title("Bienvenue dans le Super Quizz de Culture G (rémy) 🧠")
-    score = 0
-    random.seed(random.randint(0,100))
+    rd = st.slider("Choisis un nombre 'au hasard'",min=0,max=100,value=0)
+    random.seed(rd)
     quizz = load_quizz([])
     pts = [int(o[0]) for o in range(quizz.shape[0]) for o in list(dict_pts.values())]
     questions_repondues = st.sidebar.multiselect("Questions auxquelles vous avez déjà répondu",quizz.index)
