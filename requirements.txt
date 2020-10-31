@@ -3,4 +3,4 @@ random
 pandas 
 numpy
 streamlit.components.v1
-Unidecode
+unicodedata
