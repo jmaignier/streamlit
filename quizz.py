@@ -15,7 +15,7 @@ import unicodedata
 
 @st.cache(suppress_st_warning=True,allow_output_mutation=True)
 def load_quizz(drop):
-    quizz =  pd.read_csv('https://raw.githubusercontent.com/maigje98/test_app/master/Quizz.csv',sep=';')
+    quizz =  pd.read_csv('https://raw.githubusercontent.com/maigje98/test_app/master/Quizz.csv?token=APV2NUAN525NZLPDFJKXJVS7T4GV2',sep=';')
     quizz['DIFFICULTE'] = quizz['DIFFICULTE'].astype(str)
     quizz=quizz.drop(32)
     
