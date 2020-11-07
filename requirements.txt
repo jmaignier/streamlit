@@ -1,4 +1,11 @@
 streamlit 
 pandas 
 numpy
-
+nltk
+PIL
+plotly
+string
+re
+tensorflow
+matplotlib
+sklearn
