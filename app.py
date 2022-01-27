@@ -1,7 +1,8 @@
 import streamlit as st
 
 def main():
-    st.title("hello l'AMD")
+    st.title("Hello")
+
 
 if __name__ == "__main__":
     main()
